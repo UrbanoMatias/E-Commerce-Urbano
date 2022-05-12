@@ -81,23 +81,6 @@ io.on('connection', async socket=>{
     });
 })
 
-//Render Views
-app.get('/', (req, res) => {
-    res.render('login')
-})
-
-app.get('/register', (req, res) => {
-    res.render('register')
-})
-
-app.get('/logout', (req, res) => {
-    res.render('logout')
-})
-
-app.get('/home', (req, res) => {
-    res.render('home')
-})
-
 app.use('/*', (req,res)=> res.send({
     error:-2,
     description: `Path ${req.originalUrl} and method ${req.method} aren't implemented`
